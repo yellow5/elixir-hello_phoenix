@@ -1,5 +1,9 @@
 # HelloPhoenix
 
+Building intro app following Phoenix Framework's guide:
+
+http://www.phoenixframework.org/docs/up-and-running
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
