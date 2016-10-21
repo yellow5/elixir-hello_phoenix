@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <meta name="locale" content="<%= @locale %>">
 
-    <title>Hello HelloPhoenix!</title>
+    <title><%= title %></title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
