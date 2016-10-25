@@ -7,6 +7,7 @@ defmodule HelloPhoenix.User do
     field :bio, :string
     field :number_of_pets, :integer
 
+    has_many :videos, HelloPhoenix.Video
     timestamps()
   end
 
