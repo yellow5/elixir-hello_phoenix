@@ -15,4 +15,9 @@ defmodule HelloPhoenix.UserTest do
     changeset = User.changeset(%User{}, @invalid_attrs)
     refute changeset.valid?
   end
+
+  test "number_of_pets is not required" do
+    changeset = User.changeset(%User{}, Map.delete(@valid_attrs, :number_of_pets))
+    assert changeset.valid?
+  end
 end

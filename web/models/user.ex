@@ -17,6 +17,6 @@ defmodule HelloPhoenix.User do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:name, :email, :bio, :number_of_pets])
-    |> validate_required([:name, :email, :bio, :number_of_pets])
+    |> validate_required([:name, :email, :bio])
   end
 end
