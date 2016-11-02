@@ -30,4 +30,9 @@ defmodule HelloPhoenix.UserTest do
     attrs = %{@valid_attrs | bio: long_string(141)}
     assert {:bio, "should be at most 140 character(s)"} in errors_on(%User{}, attrs)
   end
+
+  test "email must contain at least an @" do
+    attrs = %{@valid_attrs | email: "email.example.com"}
+    assert {:email, "has invalid format"} in errors_on(%User{}, attrs)
+  end
 end
