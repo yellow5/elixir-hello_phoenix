@@ -5,7 +5,7 @@ defmodule HelloPhoenix.UserController do
 
   def index(conn, _params) do
     users = User |> Repo.all |> Repo.preload([:videos])
-    render(conn, "index.html", users: users)
+    render(conn, :index, users: users)
   end
 
   def new(conn, _params) do
@@ -28,7 +28,7 @@ defmodule HelloPhoenix.UserController do
 
   def show(conn, %{"id" => id}) do
     user = User |> Repo.get!(id) |> Repo.preload([:videos])
-    render(conn, "show.html", user: user)
+    render(conn, :show, user: user)
   end
 
   def edit(conn, %{"id" => id}) do
