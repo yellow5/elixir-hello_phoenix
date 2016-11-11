@@ -20,8 +20,10 @@ import "phoenix_html"
 
 import socket from "./socket"
 
+import { Greet } from "web/static/js/greeter"
+
 export var App = {
   run: function() {
-    console.log("Hello!")
+    Greet.greet()
   }
 }
